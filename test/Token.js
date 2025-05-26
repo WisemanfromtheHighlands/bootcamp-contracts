@@ -160,7 +160,7 @@ describe("Token", () => {
           .to.be.revertedWith(ERROR)
       })
 
-      it("Rejects insufficient allowance", async () => {
+      it("rejects insufficient allowance", async () => {
         const { token, deployer, receiver, exchange } = await loadFixture(deployTokenFixture)
 
         const ALLOWANCE_AMOUNT = tokens(100)
