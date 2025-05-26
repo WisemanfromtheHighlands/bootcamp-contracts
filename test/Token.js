@@ -44,7 +44,7 @@ describe("Token", () => {
   describe("Sending Tokens", () => {
     const AMOUNT = tokens(100)
 
-    describe("Sucess", () => {
+    describe("Success", () => {
       it("transfers token balances", async () => {
         const { token, deployer, receiver } = await loadFixture(deployTokenFixture)
   
