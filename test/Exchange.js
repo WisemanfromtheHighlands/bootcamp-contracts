@@ -15,7 +15,7 @@ describe("Exchange", () => {
       expect(await exchange.feeAccount()).to.equal(accounts.feeAccount.address)
     })
 
-    it("tracks the fee account", async () => {
+    it("tracks the fee percent", async () => {
       const { exchange } = await loadFixture(deployExchangeFixture)
       expect(await exchange.feePercent()).to.equal(10)
     })
