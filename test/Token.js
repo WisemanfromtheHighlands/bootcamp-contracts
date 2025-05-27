@@ -44,7 +44,7 @@ describe("Token", () => {
   describe("Sending Tokens", () => {
     const AMOUNT = tokens(100)
 
-    describe("Sucess", () => {
+    describe("Success", () => {
       it("transfers token balances", async () => {
         const { token, deployer, receiver } = await loadFixture(deployTokenFixture)
   
@@ -92,7 +92,7 @@ describe("Token", () => {
   describe("Approving Tokens", () => {
     const AMOUNT = tokens(100)
 
-    describe("Sucess", () => {
+    describe("Success", () => {
       it("allocates an allowance for delegated token spending", async () => {
         const { token, deployer, exchange } = await loadFixture(deployTokenFixture)
   
@@ -129,7 +129,7 @@ describe("Token", () => {
   describe("Delegated Token Transfers", () => {
     const AMOUNT = tokens(100)
 
-    describe("Sucess", () => {
+    describe("Success", () => {
       it("transfers token balances", async () => {
         const { token, deployer, receiver } = await loadFixture(transferFromTokenFixture)
         expect(await token.balanceOf(deployer.address)).to.equal(tokens(999900))
@@ -160,7 +160,7 @@ describe("Token", () => {
           .to.be.revertedWith(ERROR)
       })
 
-      it("Rejects insufficient allowance", async () => {
+      it("rejects insufficient allowance", async () => {
         const { token, deployer, receiver, exchange } = await loadFixture(deployTokenFixture)
 
         const ALLOWANCE_AMOUNT = tokens(100)
