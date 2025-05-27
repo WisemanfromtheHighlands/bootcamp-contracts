@@ -15,7 +15,7 @@ describe("Exchange", () => {
       expect(await exchange.feeAccount()).to.equal(accounts.feeAccount.address)
     })
 
-    it("tracks the fee prcent", async () => {
+    it("tracks the fee percent", async () => {
       const { exchange } = await loadFixture(deployExchangeFixture)
       expect(await exchange.feePercent()).to.equal(10)
     })
@@ -262,7 +262,7 @@ describe("Exchange", () => {
         await expect(exchange.connect(accounts.user2).fillOrder(1)).to.be.revertedWith(ERROR)
       })
 
-      it("Rejects canceled orders", async () => {
+      it("rejects canceled orders", async () => {
         const { exchange, accounts } = await loadFixture(orderExchangeFixture)
         const ERROR = "Exchange: Order has been canceled"
 
