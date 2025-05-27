@@ -124,7 +124,7 @@ describe("Exchange", () => {
     })
 
     describe("Failure", () => {
-      it("Rejects with no balance", async () => {
+      it("rejects with no balance", async () => {
         const { tokens: { token0, token1 }, exchange, accounts } = await loadFixture(deployExchangeFixture)
         const ERROR = "Exchange: Insufficient balance"
 
@@ -262,7 +262,7 @@ describe("Exchange", () => {
         await expect(exchange.connect(accounts.user2).fillOrder(1)).to.be.revertedWith(ERROR)
       })
 
-      it("Rejects canceled orders", async () => {
+      it("rejects canceled orders", async () => {
         const { exchange, accounts } = await loadFixture(orderExchangeFixture)
         const ERROR = "Exchange: Order has been canceled"
 
